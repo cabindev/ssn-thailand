@@ -33,8 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="th">
-      <body className="min-h-screen flex flex-col">
+    <html lang="th" data-theme="ssn">
+      <body className="min-h-screen flex flex-col bg-base-100">
         <StyledComponentsRegistry>
           <ConfigProvider theme={theme} locale={thTH}>
             <Header />

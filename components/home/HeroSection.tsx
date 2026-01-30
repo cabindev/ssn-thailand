@@ -10,18 +10,20 @@ export default function HeroSection() {
 
       <div className="container-custom relative">
         <div className="max-w-2xl mx-auto text-center">
-          {/* Logo & Title Row */}
-          <div className="flex items-center justify-center gap-4 mb-4">
+          {/* Logo */}
+          <div className="flex justify-center mb-4">
             <Image
               src="/powerUp.svg"
               alt="Power Up Logo"
-              width={56}
-              height={56}
+              width={80}
+              height={80}
             />
-            <h1 className="text-3xl md:text-4xl font-bold text-white">
-              เครือข่ายพลังสังคม
-            </h1>
           </div>
+
+          {/* Title */}
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            เครือข่ายพลังสังคม
+          </h1>
 
           {/* Subtitle */}
           <p className="text-green-50 mb-8 text-lg">

@@ -27,6 +27,27 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
+  daisyui: {
+    themes: [
+      {
+        ssn: {
+          'primary': '#16a34a',
+          'primary-content': '#ffffff',
+          'secondary': '#22c55e',
+          'accent': '#4ade80',
+          'neutral': '#374151',
+          'base-100': '#ffffff',
+          'base-200': '#f9fafb',
+          'base-300': '#f3f4f6',
+          'info': '#3b82f6',
+          'success': '#22c55e',
+          'warning': '#f59e0b',
+          'error': '#ef4444',
+        },
+      },
+    ],
+    defaultTheme: 'ssn',
+  },
 }
 export default config

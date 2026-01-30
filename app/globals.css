@@ -143,3 +143,14 @@ a {
     height: 350px;
   }
 }
+
+/* DaisyUI Timeline fix */
+.timeline hr {
+  height: 100%;
+  border: none;
+}
+
+.timeline-vertical hr {
+  width: 4px;
+  background-color: #d1d5db;
+}
