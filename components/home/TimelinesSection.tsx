@@ -26,23 +26,6 @@ function formatDate(dateString?: string): string {
   }
 }
 
-// Format datetime to Thai
-function formatDateTime(dateString?: string): string {
-  if (!dateString) return '';
-  try {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('th-TH', {
-      day: 'numeric',
-      month: 'short',
-      year: 'numeric',
-    }) + ' ' + date.toLocaleTimeString('th-TH', {
-      hour: '2-digit',
-      minute: '2-digit',
-    });
-  } catch {
-    return '';
-  }
-}
 
 export default function TimelinesSection({ activities, policies }: TimelinesSectionProps) {
   const activityList = activities?.slice(0, 5) || [];
@@ -72,7 +55,7 @@ export default function TimelinesSection({ activities, policies }: TimelinesSect
                     <div className={index % 2 === 0 ? 'timeline-start mb-10 md:text-end' : 'timeline-end md:mb-10'}>
                       <Link href={`/creative-activities/${activity.id}`} className="block hover:opacity-70 transition-opacity">
                         <time className="font-mono italic">
-                          {formatDateTime(activity.createdAt || activity.created_at)}
+                          {formatDate(activity.createdAt || activity.created_at)}
                         </time>
                         <div className="text-lg font-black">
                           {activity.name}
