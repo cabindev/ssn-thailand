@@ -1,8 +1,8 @@
-# SSN Thailand API Examples for Postman
+# SSN Thailand API Documentation
 
 ## Base URL
 ```
-https://ssnthailand.com/api
+https://ssn.sdnthailand.com/api
 ```
 
 ---
@@ -14,87 +14,67 @@ https://ssnthailand.com/api
 
 **Request:**
 ```
-GET https://ssnthailand.com/api/dashboard
+GET https://ssn.sdnthailand.com/api/dashboard
 ```
 
 **Response:**
 ```json
 {
   "stats": {
-    "creative_activities_count": 156,
-    "traditions_count": 89,
-    "ethnic_groups_count": 42,
-    "public_policies_count": 73
+    "creative_activities_count": 308,
+    "traditions_count": 125,
+    "ethnic_groups_count": 6,
+    "public_policies_count": 174,
+    "total_count": 613
   },
   "charts": {
     "creative_activities_by_region": [
-      { "type": "ภาคเหนือ", "value": 35 },
-      { "type": "ภาคกลาง", "value": 45 },
-      { "type": "ภาคตะวันออกเฉียงเหนือ", "value": 38 },
-      { "type": "ภาคใต้", "value": 28 },
-      { "type": "ภาคตะวันออก", "value": 10 }
+      { "type": "อีสานบน", "value": 120 },
+      { "type": "กลาง", "value": 85 },
+      { "type": "เหนือบน", "value": 50 },
+      { "type": "ใต้บน", "value": 30 }
     ],
     "traditions_by_region": [
-      { "type": "ภาคเหนือ", "value": 25 },
-      { "type": "ภาคกลาง", "value": 20 },
-      { "type": "ภาคตะวันออกเฉียงเหนือ", "value": 22 },
-      { "type": "ภาคใต้", "value": 15 },
-      { "type": "ภาคตะวันออก", "value": 7 }
+      { "type": "อีสานบน", "value": 45 },
+      { "type": "กลาง", "value": 35 },
+      { "type": "เหนือบน", "value": 25 }
     ],
     "ethnic_groups_by_region": [
-      { "type": "ภาคเหนือ", "value": 18 },
-      { "type": "ภาคกลาง", "value": 5 },
-      { "type": "ภาคตะวันออกเฉียงเหนือ", "value": 8 },
-      { "type": "ภาคใต้", "value": 6 },
-      { "type": "ภาคตะวันตก", "value": 5 }
+      { "type": "เหนือบน", "value": 3 },
+      { "type": "อีสานบน", "value": 2 }
     ],
     "public_policies_by_level": [
-      { "type": "ระดับชาติ", "value": 12 },
-      { "type": "ระดับจังหวัด", "value": 25 },
-      { "type": "ระดับอำเภอ", "value": 18 },
-      { "type": "ระดับตำบล", "value": 10 },
-      { "type": "ระดับชุมชน", "value": 8 }
+      { "type": "PROVINCIAL", "value": 60 },
+      { "type": "DISTRICT", "value": 50 },
+      { "type": "SUB_DISTRICT", "value": 40 },
+      { "type": "NATIONAL", "value": 15 },
+      { "type": "VILLAGE", "value": 9 }
     ]
   },
   "recent": {
     "creative_activities": [
       {
         "id": 1,
-        "name": "งานวิ่งมาราธอนเพื่อสุขภาพ",
-        "description": "กิจกรรมวิ่งเพื่อสุขภาพ ส่งเสริมการออกกำลังกาย",
-        "province": "กรุงเทพมหานคร",
-        "region": "central",
-        "cover_image": "https://example.com/images/marathon.jpg"
-      }
-    ],
-    "traditions": [
-      {
-        "id": 1,
-        "name": "ประเพณีสงกรานต์",
-        "description": "ประเพณีสงกรานต์แบบดั้งเดิม",
+        "name": "โครงการ Local Creator - เพราะทุกพื้นที่มีคอนเทนต์",
+        "description": "กิจกรรมส่งเสริมการสร้างคอนเทนต์ในท้องถิ่น",
         "province": "เชียงใหม่",
-        "region": "north",
-        "cover_image": "https://example.com/images/songkran.jpg"
+        "region": "เหนือบน",
+        "images": ["https://example.com/image.jpg"],
+        "createdAt": "2025-09-08T23:30:00Z"
       }
     ],
-    "ethnic_groups": [
-      {
-        "id": 1,
-        "name": "กลุ่มชาติพันธุ์กะเหรี่ยง",
-        "description": "ชนเผ่าที่มีวิถีชีวิตเรียบง่าย",
-        "province": "ตาก",
-        "region": "north",
-        "cover_image": "https://example.com/images/karen.jpg"
-      }
-    ],
+    "traditions": [],
+    "ethnic_groups": [],
     "public_policies": [
       {
         "id": 1,
-        "name": "นโยบายส่งเสริมสุขภาพชุมชน",
-        "description": "นโยบายระดับชาติที่ส่งเสริมสุขภาพ",
-        "level": "national",
-        "province": "ทั่วประเทศ",
-        "cover_image": "https://example.com/images/policy.jpg"
+        "name": "บันทึกข้อตกลงความร่วมมือ (MOU) นโยบายสาธารณะ",
+        "description": "นโยบายสาธารณะระดับอำเภอ",
+        "level": "DISTRICT",
+        "province": "อำนาจเจริญ",
+        "region": "อีสานล่าง",
+        "signingDate": "2025-09-05",
+        "createdAt": "2025-09-05T00:00:00Z"
       }
     ]
   }
@@ -110,7 +90,7 @@ GET https://ssnthailand.com/api/dashboard
 
 **Request:**
 ```
-GET https://ssnthailand.com/api/creative-activities?page=1&per_page=12&region=north&search=วิ่ง
+GET https://ssn.sdnthailand.com/api/creative-activities?page=1&per_page=12&region=เหนือบน&search=สงกรานต์
 ```
 
 **Query Parameters:**
@@ -119,9 +99,8 @@ GET https://ssnthailand.com/api/creative-activities?page=1&per_page=12&region=no
 | page | number | หน้าที่ต้องการ (default: 1) |
 | per_page | number | จำนวนต่อหน้า (default: 12) |
 | search | string | คำค้นหา |
-| region | string | ภูมิภาค (north, northeast, central, east, west, south) |
+| region | string | ภูมิภาค (ดูตาราง Region Values) |
 | province | string | จังหวัด |
-| category | string | หมวดหมู่ |
 
 **Response:**
 ```json
@@ -129,41 +108,23 @@ GET https://ssnthailand.com/api/creative-activities?page=1&per_page=12&region=no
   "data": [
     {
       "id": 1,
-      "name": "งานวิ่งมาราธอนเพื่อสุขภาพ",
-      "description": "กิจกรรมวิ่งเพื่อสุขภาพ ส่งเสริมการออกกำลังกายในชุมชน",
-      "location": "สวนลุมพินี",
-      "province": "กรุงเทพมหานคร",
-      "region": "central",
-      "category": "กีฬา",
-      "images": [
-        "https://example.com/images/marathon1.jpg",
-        "https://example.com/images/marathon2.jpg"
-      ],
-      "cover_image": "https://example.com/images/marathon1.jpg",
-      "created_at": "2024-01-15T10:30:00Z",
-      "updated_at": "2024-01-15T10:30:00Z"
-    },
-    {
-      "id": 2,
-      "name": "คอนเสิร์ตดนตรีในสวน",
-      "description": "การแสดงดนตรีสดในบรรยากาศธรรมชาติ",
-      "location": "สวนสาธารณะ",
-      "province": "เชียงใหม่",
-      "region": "north",
-      "category": "ดนตรี",
-      "images": [
-        "https://example.com/images/concert1.jpg"
-      ],
-      "cover_image": "https://example.com/images/concert1.jpg",
-      "created_at": "2024-01-10T08:00:00Z",
-      "updated_at": "2024-01-10T08:00:00Z"
+      "name": "ประกวด สงกรานต์ Cover Dance Battle 2025",
+      "description": "ส่งเสริมกิจกรรมเด็กและเยาวชน",
+      "province": "ขอนแก่น",
+      "amphoe": "เมืองขอนแก่น",
+      "district": "ในเมือง",
+      "region": "อีสานบน",
+      "type": "กิจกรรมเยาวชน",
+      "images": ["https://example.com/image.jpg"],
+      "createdAt": "2025-09-08T23:20:00Z",
+      "updatedAt": "2025-09-08T23:20:00Z"
     }
   ],
   "meta": {
     "current_page": 1,
-    "last_page": 5,
+    "last_page": 26,
     "per_page": 12,
-    "total": 56
+    "total": 308
   }
 }
 ```
@@ -173,7 +134,7 @@ GET https://ssnthailand.com/api/creative-activities?page=1&per_page=12&region=no
 
 **Request:**
 ```
-GET https://ssnthailand.com/api/creative-activities/1
+GET https://ssn.sdnthailand.com/api/creative-activities/1
 ```
 
 **Response:**
@@ -181,20 +142,16 @@ GET https://ssnthailand.com/api/creative-activities/1
 {
   "data": {
     "id": 1,
-    "name": "งานวิ่งมาราธอนเพื่อสุขภาพ",
-    "description": "กิจกรรมวิ่งเพื่อสุขภาพ ส่งเสริมการออกกำลังกายในชุมชน จัดขึ้นเป็นประจำทุกปี",
-    "location": "สวนลุมพินี",
-    "province": "กรุงเทพมหานคร",
-    "region": "central",
-    "category": "กีฬา",
-    "images": [
-      "https://example.com/images/marathon1.jpg",
-      "https://example.com/images/marathon2.jpg",
-      "https://example.com/images/marathon3.jpg"
-    ],
-    "cover_image": "https://example.com/images/marathon1.jpg",
-    "created_at": "2024-01-15T10:30:00Z",
-    "updated_at": "2024-01-15T10:30:00Z"
+    "name": "ประกวด สงกรานต์ Cover Dance Battle 2025",
+    "description": "ส่งเสริมกิจกรรมเด็กและเยาวชนขอนแก่น",
+    "province": "ขอนแก่น",
+    "amphoe": "เมืองขอนแก่น",
+    "district": "ในเมือง",
+    "region": "อีสานบน",
+    "type": "กิจกรรมเยาวชน",
+    "images": ["https://example.com/image1.jpg", "https://example.com/image2.jpg"],
+    "createdAt": "2025-09-08T23:20:00Z",
+    "updatedAt": "2025-09-08T23:20:00Z"
   }
 }
 ```
@@ -208,7 +165,7 @@ GET https://ssnthailand.com/api/creative-activities/1
 
 **Request:**
 ```
-GET https://ssnthailand.com/api/traditions?page=1&per_page=12
+GET https://ssn.sdnthailand.com/api/traditions?page=1&per_page=12
 ```
 
 **Response:**
@@ -217,29 +174,21 @@ GET https://ssnthailand.com/api/traditions?page=1&per_page=12
   "data": [
     {
       "id": 1,
-      "name": "ประเพณีสงกรานต์",
-      "description": "ประเพณีปีใหม่ไทย",
-      "history": "สงกรานต์เป็นประเพณีที่สืบทอดมาแต่โบราณ...",
-      "alcohol_free_approach": "จัดกิจกรรมรดน้ำดำหัวผู้ใหญ่แบบดั้งเดิม",
-      "location": "ทั่วประเทศ",
-      "province": "เชียงใหม่",
-      "region": "north",
-      "category": "เทศกาล",
-      "images": [
-        "https://example.com/images/songkran1.jpg"
-      ],
-      "cover_image": "https://example.com/images/songkran1.jpg",
-      "has_policy": true,
-      "policy_details": "มีประกาศจังหวัดสนับสนุนงานสงกรานต์ปลอดภัย",
-      "created_at": "2024-01-01T00:00:00Z",
-      "updated_at": "2024-01-01T00:00:00Z"
+      "name": "งานบุญประเพณีปลอดเหล้า",
+      "description": "งานบุญประเพณีที่ส่งเสริมการไม่ดื่มแอลกอฮอล์",
+      "province": "อุบลราชธานี",
+      "amphoe": "น้ำยืน",
+      "district": "โซง",
+      "region": "อีสานล่าง",
+      "images": ["https://example.com/image.jpg"],
+      "createdAt": "2025-08-25T00:00:00Z"
     }
   ],
   "meta": {
     "current_page": 1,
-    "last_page": 3,
+    "last_page": 11,
     "per_page": 12,
-    "total": 35
+    "total": 125
   }
 }
 ```
@@ -247,33 +196,7 @@ GET https://ssnthailand.com/api/traditions?page=1&per_page=12
 ### GET /traditions/{id}
 **Request:**
 ```
-GET https://ssnthailand.com/api/traditions/1
-```
-
-**Response:**
-```json
-{
-  "data": {
-    "id": 1,
-    "name": "ประเพณีสงกรานต์",
-    "description": "ประเพณีปีใหม่ไทย จัดขึ้นในช่วงเดือนเมษายนของทุกปี",
-    "history": "สงกรานต์เป็นประเพณีที่สืบทอดมาแต่โบราณกว่า 700 ปี เป็นการเฉลิมฉลองปีใหม่ไทย",
-    "alcohol_free_approach": "จัดกิจกรรมรดน้ำดำหัวผู้ใหญ่แบบดั้งเดิม สรงน้ำพระ ทำบุญตักบาตร",
-    "location": "ทั่วประเทศ",
-    "province": "เชียงใหม่",
-    "region": "north",
-    "category": "เทศกาล",
-    "images": [
-      "https://example.com/images/songkran1.jpg",
-      "https://example.com/images/songkran2.jpg"
-    ],
-    "cover_image": "https://example.com/images/songkran1.jpg",
-    "has_policy": true,
-    "policy_details": "มีประกาศจังหวัดสนับสนุนงานสงกรานต์ปลอดภัย",
-    "created_at": "2024-01-01T00:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z"
-  }
-}
+GET https://ssn.sdnthailand.com/api/traditions/1
 ```
 
 ---
@@ -285,7 +208,7 @@ GET https://ssnthailand.com/api/traditions/1
 
 **Request:**
 ```
-GET https://ssnthailand.com/api/ethnic-groups?page=1&per_page=12
+GET https://ssn.sdnthailand.com/api/ethnic-groups?page=1&per_page=12
 ```
 
 **Response:**
@@ -295,26 +218,18 @@ GET https://ssnthailand.com/api/ethnic-groups?page=1&per_page=12
     {
       "id": 1,
       "name": "กลุ่มชาติพันธุ์กะเหรี่ยง",
-      "description": "ชนเผ่าที่มีวิถีชีวิตเรียบง่าย ใกล้ชิดธรรมชาติ",
-      "history": "กะเหรี่ยงเป็นกลุ่มชาติพันธุ์ที่อาศัยอยู่ในประเทศไทยมานานกว่า 200 ปี",
-      "population": 500000,
-      "location": "บริเวณชายแดนไทย-เมียนมา",
+      "description": "ชนเผ่าที่มีวิถีชีวิตเรียบง่าย",
       "province": "ตาก",
-      "region": "north",
-      "activities": "ทอผ้า เกษตรกรรม งานหัตถกรรม",
-      "images": [
-        "https://example.com/images/karen1.jpg"
-      ],
-      "cover_image": "https://example.com/images/karen1.jpg",
-      "created_at": "2024-01-01T00:00:00Z",
-      "updated_at": "2024-01-01T00:00:00Z"
+      "region": "เหนือบน",
+      "images": ["https://example.com/image.jpg"],
+      "createdAt": "2024-01-01T00:00:00Z"
     }
   ],
   "meta": {
     "current_page": 1,
-    "last_page": 2,
+    "last_page": 1,
     "per_page": 12,
-    "total": 20
+    "total": 6
   }
 }
 ```
@@ -322,31 +237,7 @@ GET https://ssnthailand.com/api/ethnic-groups?page=1&per_page=12
 ### GET /ethnic-groups/{id}
 **Request:**
 ```
-GET https://ssnthailand.com/api/ethnic-groups/1
-```
-
-**Response:**
-```json
-{
-  "data": {
-    "id": 1,
-    "name": "กลุ่มชาติพันธุ์กะเหรี่ยง",
-    "description": "ชนเผ่าที่มีวิถีชีวิตเรียบง่าย ใกล้ชิดธรรมชาติ",
-    "history": "กะเหรี่ยงเป็นกลุ่มชาติพันธุ์ที่อาศัยอยู่ในประเทศไทยมานานกว่า 200 ปี มีวัฒนธรรมและประเพณีเป็นเอกลักษณ์",
-    "population": 500000,
-    "location": "บริเวณชายแดนไทย-เมียนมา จังหวัดตาก แม่ฮ่องสอน กาญจนบุรี",
-    "province": "ตาก",
-    "region": "north",
-    "activities": "การทอผ้า เกษตรกรรมแบบยั่งยืน งานหัตถกรรมพื้นบ้าน การรักษาป่า",
-    "images": [
-      "https://example.com/images/karen1.jpg",
-      "https://example.com/images/karen2.jpg"
-    ],
-    "cover_image": "https://example.com/images/karen1.jpg",
-    "created_at": "2024-01-01T00:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z"
-  }
-}
+GET https://ssn.sdnthailand.com/api/ethnic-groups/1
 ```
 
 ---
@@ -358,7 +249,7 @@ GET https://ssnthailand.com/api/ethnic-groups/1
 
 **Request:**
 ```
-GET https://ssnthailand.com/api/public-policies?page=1&per_page=12&level=national
+GET https://ssn.sdnthailand.com/api/public-policies?page=1&per_page=12&level=PROVINCIAL
 ```
 
 **Query Parameters:**
@@ -367,7 +258,7 @@ GET https://ssnthailand.com/api/public-policies?page=1&per_page=12&level=nationa
 | page | number | หน้าที่ต้องการ |
 | per_page | number | จำนวนต่อหน้า |
 | search | string | คำค้นหา |
-| level | string | ระดับนโยบาย (national, provincial, district, subdistrict, community) |
+| level | string | ระดับนโยบาย (ดูตาราง Policy Level Values) |
 | region | string | ภูมิภาค |
 | province | string | จังหวัด |
 
@@ -377,27 +268,21 @@ GET https://ssnthailand.com/api/public-policies?page=1&per_page=12&level=nationa
   "data": [
     {
       "id": 1,
-      "name": "นโยบายส่งเสริมสุขภาพชุมชน",
-      "description": "นโยบายระดับชาติที่ส่งเสริมสุขภาพในชุมชน",
-      "level": "national",
-      "organization": "กระทรวงสาธารณสุข",
-      "province": "ทั่วประเทศ",
-      "region": null,
-      "implementation_date": "2023-01-01",
-      "images": [
-        "https://example.com/images/policy1.jpg"
-      ],
-      "cover_image": "https://example.com/images/policy1.jpg",
-      "document_url": "https://example.com/docs/policy1.pdf",
-      "created_at": "2024-01-01T00:00:00Z",
-      "updated_at": "2024-01-01T00:00:00Z"
+      "name": "MOU ทุกอำเภอ ขยายผล 1 อำเภอ 1 งานปลอดภัย",
+      "description": "สืบสานงานบุญประเพณีปลอดเหล้า-บุหรี่-ยาเสพติด",
+      "level": "PROVINCIAL",
+      "province": "นครศรีธรรมราช",
+      "region": "ใต้บน",
+      "signingDate": "2025-08-24",
+      "images": ["https://example.com/image.jpg"],
+      "createdAt": "2025-08-24T00:00:00Z"
     }
   ],
   "meta": {
     "current_page": 1,
-    "last_page": 3,
+    "last_page": 15,
     "per_page": 12,
-    "total": 30
+    "total": 174
   }
 }
 ```
@@ -405,107 +290,121 @@ GET https://ssnthailand.com/api/public-policies?page=1&per_page=12&level=nationa
 ### GET /public-policies/{id}
 **Request:**
 ```
-GET https://ssnthailand.com/api/public-policies/1
-```
-
-**Response:**
-```json
-{
-  "data": {
-    "id": 1,
-    "name": "นโยบายส่งเสริมสุขภาพชุมชน",
-    "description": "นโยบายระดับชาติที่ส่งเสริมสุขภาพในชุมชน มุ่งเน้นการป้องกันโรคและส่งเสริมสุขภาพ",
-    "level": "national",
-    "organization": "กระทรวงสาธารณสุข",
-    "province": "ทั่วประเทศ",
-    "region": null,
-    "implementation_date": "2023-01-01",
-    "images": [
-      "https://example.com/images/policy1.jpg",
-      "https://example.com/images/policy2.jpg"
-    ],
-    "cover_image": "https://example.com/images/policy1.jpg",
-    "document_url": "https://example.com/docs/policy1.pdf",
-    "created_at": "2024-01-01T00:00:00Z",
-    "updated_at": "2024-01-01T00:00:00Z"
-  }
-}
+GET https://ssn.sdnthailand.com/api/public-policies/1
 ```
 
 ---
 
-## 6. Categories API
+## 6. Search API
 
-### GET /categories
-ดึงรายการหมวดหมู่
+### GET /search
+ค้นหาข้อมูลทั้งหมด
 
 **Request:**
 ```
-GET https://ssnthailand.com/api/categories?type=creative_activity
+GET https://ssn.sdnthailand.com/api/search?q=สงกรานต์
 ```
 
 **Query Parameters:**
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| type | string | ประเภท (creative_activity, tradition, ethnic_group) |
+| q | string | คำค้นหา |
 
 **Response:**
 ```json
 {
-  "data": [
-    {
-      "id": 1,
-      "name": "กีฬา",
-      "slug": "sports",
-      "type": "creative_activity"
-    },
-    {
-      "id": 2,
-      "name": "ดนตรี",
-      "slug": "music",
-      "type": "creative_activity"
-    },
-    {
-      "id": 3,
-      "name": "ศิลปะ",
-      "slug": "art",
-      "type": "creative_activity"
-    }
-  ]
+  "creative_activities": [
+    { "id": 1, "name": "ประกวด สงกรานต์ Cover Dance", "type": "creative_activity" }
+  ],
+  "traditions": [
+    { "id": 1, "name": "งานสงกรานต์ปลอดภัย", "type": "tradition" }
+  ],
+  "ethnic_groups": [],
+  "public_policies": []
 }
 ```
 
 ---
 
-## Region Values
+## Region Values (10 ภูมิภาค)
+
 | Value | Label |
 |-------|-------|
-| north | ภาคเหนือ |
-| northeast | ภาคตะวันออกเฉียงเหนือ |
-| central | ภาคกลาง |
-| east | ภาคตะวันออก |
-| west | ภาคตะวันตก |
-| south | ภาคใต้ |
+| กรุงเทพมหานคร | กรุงเทพมหานคร |
+| กลาง | ภาคกลาง |
+| ตะวันตก | ภาคตะวันตก |
+| ตะวันออก | ภาคตะวันออก |
+| อีสานบน | ภาคอีสานบน |
+| อีสานล่าง | ภาคอีสานล่าง |
+| เหนือบน | ภาคเหนือบน |
+| เหนือล่าง | ภาคเหนือล่าง |
+| ใต้บน | ภาคใต้บน |
+| ใต้ล่าง | ภาคใต้ล่าง |
 
 ## Policy Level Values
+
 | Value | Label |
 |-------|-------|
-| national | ระดับชาติ |
-| provincial | ระดับจังหวัด |
-| district | ระดับอำเภอ |
-| subdistrict | ระดับตำบล |
-| community | ระดับชุมชน |
+| NATIONAL | ระดับประเทศ |
+| HEALTH_REGION | ระดับเขตสุขภาพ |
+| PROVINCIAL | ระดับจังหวัด |
+| DISTRICT | ระดับอำเภอ |
+| SUB_DISTRICT | ระดับตำบล |
+| VILLAGE | ระดับหมู่บ้าน |
 
 ---
 
-## Postman Collection Import
+## Frontend URLs
 
-คุณสามารถ import endpoints เหล่านี้ใน Postman โดย:
+| Page | URL |
+|------|-----|
+| หน้าแรก | / |
+| กิจกรรมสร้างสรรค์ | /creative-activities |
+| รายละเอียดกิจกรรม | /creative-activities/{id} |
+| ประเพณี | /traditions |
+| รายละเอียดประเพณี | /traditions/{id} |
+| กลุ่มชาติพันธุ์ | /ethnic-groups |
+| รายละเอียดกลุ่มชาติพันธุ์ | /ethnic-groups/{id} |
+| นโยบายสาธารณะ | /public-policies |
+| รายละเอียดนโยบาย | /public-policies/{id} |
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js 14
+- **UI Library:** Ant Design, DaisyUI 4.12.11
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **Language:** TypeScript
+
+---
+
+## Deployment
+
+### Plesk Panel
+
+1. Upload files to server
+2. Install dependencies: `npm install`
+3. Build: `npm run build`
+4. Start: `npm start` (uses custom server.js)
+
+### Environment Variables
+```
+PORT=3000
+NODE_ENV=production
+```
+
+---
+
+## Postman Collection
+
+Import endpoints ใน Postman:
 1. สร้าง Collection ใหม่ชื่อ "SSN Thailand API"
-2. เพิ่ม Environment Variable: `base_url` = `https://ssnthailand.com/api`
+2. เพิ่ม Environment Variable: `base_url` = `https://ssn.sdnthailand.com/api`
 3. สร้าง Request สำหรับแต่ละ endpoint
 
-### Headers ที่ต้องใช้:
+### Headers:
 ```
 Content-Type: application/json
 Accept: application/json
