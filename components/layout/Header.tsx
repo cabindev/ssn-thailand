@@ -6,12 +6,18 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, Button, Drawer } from 'antd';
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons';
+import { Database, BookOpen } from 'lucide-react';
 
 const menuItems = [
   { key: '/creative-activities', label: 'กิจกรรมสร้างสรรค์' },
   { key: '/traditions', label: 'ประเพณี' },
   { key: '/ethnic-groups', label: 'กลุ่มชาติพันธุ์' },
   { key: '/public-policies', label: 'นโยบายสาธารณะ' },
+];
+
+const externalLinks = [
+  { key: 'database', label: 'Database', href: 'https://database.ssnthailand.com/', icon: Database },
+  { key: 'openread', label: 'Openread', href: 'https://openread.ssnthailand.com/', icon: BookOpen },
 ];
 
 export default function Header() {
@@ -47,14 +53,30 @@ export default function Header() {
             <Menu
               mode="horizontal"
               selectedKeys={getSelectedKey()}
-              items={menuItems.map((item) => ({
-                key: item.key,
-                label: (
-                  <Link href={item.key} className="font-medium">
-                    {item.label}
-                  </Link>
-                ),
-              }))}
+              items={[
+                ...menuItems.map((item) => ({
+                  key: item.key,
+                  label: (
+                    <Link href={item.key} className="font-medium">
+                      {item.label}
+                    </Link>
+                  ),
+                })),
+                ...externalLinks.map((item) => ({
+                  key: item.key,
+                  label: (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium flex items-center gap-1"
+                    >
+                      <item.icon className="w-4 h-4" />
+                      {item.label}
+                    </a>
+                  ),
+                })),
+              ]}
               className="border-none bg-transparent"
             />
           </nav>
@@ -104,6 +126,20 @@ export default function Header() {
             >
               {item.label}
             </Link>
+          ))}
+          <div className="border-t border-gray-200 my-2" />
+          {externalLinks.map((item) => (
+            <a
+              key={item.key}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="px-4 py-3 rounded-lg font-medium transition-colors text-gray-700 hover:bg-gray-100 flex items-center gap-2"
+            >
+              <item.icon className="w-5 h-5 text-green-600" />
+              {item.label}
+            </a>
           ))}
         </nav>
       </Drawer>
