@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['localhost', 'ssnthailand.com', 'database.ssnthailand.com'],
+    domains: ['localhost', 'ssnthailand.com', 'database.ssnthailand.com', 'content.ssnthailand.com', 'secure.gravatar.com'],
     remotePatterns: [
       {
         protocol: 'https',

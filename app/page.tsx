@@ -6,6 +6,7 @@ import ChartsSection from '@/components/home/ChartsSection';
 import RecentItems from '@/components/home/RecentItems';
 import BooksSection from '@/components/home/BooksSection';
 import FeaturesSection from '@/components/home/FeaturesSection';
+import BlogSection from '@/components/home/BlogSection';
 import { Dashboard } from '@/types';
 
 // Force dynamic rendering - fetch data on every request
@@ -59,6 +60,7 @@ export default async function HomePage() {
         ethnicGroups={dashboard.recent.ethnic_groups}
         publicPolicies={dashboard.recent.public_policies}
       />
+      <BlogSection />
       <BooksSection />
       <FeaturesSection />
     </div>

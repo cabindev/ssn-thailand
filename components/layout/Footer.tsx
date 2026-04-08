@@ -69,7 +69,7 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-primary-400 flex-shrink-0" />
                 <span className="text-sm">
-                  พบปัญหาการใช้งาน หรือติดต่องาน&nbsp;
+                  พบปัญหาการใช้งาน&nbsp;
                   <a href="tel:+66659935647" className="text-primary-400 hover:underline">065-993-5647</a>
                 </span>
               </li>
